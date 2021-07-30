@@ -3,7 +3,7 @@ import {Layout, Menu} from 'antd'
 
 
 const {Header} = Layout
-function Menubar({user}){
+function Menubar({user, setUser}){
     return (
     <Header style={{position:'fixed', zIndex: 1, width: '100vw'}}>
         <Menu theme="dark" mode="horizontal">
@@ -11,7 +11,7 @@ function Menubar({user}){
             {user
             ? <>
             <Menu.Item key="3">Post Quote</Menu.Item>
-            <Menu.Item key="4">Logout</Menu.Item>
+            <Menu.Item key="4" onClick={() => setUser(null)}>Logout</Menu.Item>
             </>
         : <>
             <Menu.Item key="1"><Link to="/login">Login</Link></Menu.Item>

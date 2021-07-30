@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
     <Layout>
-      <Menubar user={user}/>
+      <Menubar user={user} setUser={setUser}/>
       <Content className="site-layout"
       style={{padding: '0 50px', marginTop: 64, minHeight: '100vh'}}>
         <QuoteList/>
